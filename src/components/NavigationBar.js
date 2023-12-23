@@ -53,6 +53,11 @@ export const NavigationBar = () => {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link>
+                <Link to={routes.DANCE}>Dance</Link>
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link>
                 <Link to={routes.CONTACT}>Contact</Link>
               </Nav.Link>
             </Nav.Item>
