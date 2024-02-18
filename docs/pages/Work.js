@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import WorkPageEntry from "../components/WorkPageEntry.js";
-import { WORK_EXPERIENCES } from "../shared/workExperience";
+import { WORK_EXPERIENCES } from "../shared/workExperience.js";
 
 export default class Work extends Component {
   componentWillMount() {
@@ -23,11 +23,11 @@ export default class Work extends Component {
           as the Independent Activities Period (IAP).
         </p>
 
-        <h1 style={{paddingBottom: "2vw"}}>Industry Experience</h1>
+        <h1 style={{ paddingBottom: "2vw" }}>Industry Experience</h1>
         {WORK_EXPERIENCES.filter((work) => work.workType === "job").map((work) => {
-          return(
-            <div style={{marginBottom: "25px"}}>
-              <WorkPageEntry 
+          return (
+            <div style={{ marginBottom: "25px" }}>
+              <WorkPageEntry
                 image={work.image}
                 company={work.company}
                 position={work.position}

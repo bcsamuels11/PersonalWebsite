@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ResearchPageEntry from "../components/ResearchPageEntry.js";
 import { Container } from "react-bootstrap";
-import { WORK_EXPERIENCES } from "../shared/workExperience";
+import { WORK_EXPERIENCES } from "../shared/workExperience.js";
 
 export default class Research extends Component {
   componentWillMount() {
@@ -38,10 +38,10 @@ export default class Research extends Component {
           course.
         </p>
 
-        <h1 style={{paddingBottom: "2vw"}}>Sponsored Research</h1>
-        { WORK_EXPERIENCES.filter((project) => project.workType === "research").map((project) => {
-          return(
-            <div style={{marginBottom: "25px"}}>
+        <h1 style={{ paddingBottom: "2vw" }}>Sponsored Research</h1>
+        {WORK_EXPERIENCES.filter((project) => project.workType === "research").map((project) => {
+          return (
+            <div style={{ marginBottom: "25px" }}>
               <ResearchPageEntry
                 image={project.image}
                 project={project.company}
@@ -52,10 +52,10 @@ export default class Research extends Component {
           )
         })}
 
-        <h1 style={{paddingBottom: "2vw"}}>Projects</h1>
-        { WORK_EXPERIENCES.filter((project) => project.workType === "project").map((project) => {
-          return(
-            <div style={{marginBottom: "25px"}}>
+        <h1 style={{ paddingBottom: "2vw" }}>Projects</h1>
+        {WORK_EXPERIENCES.filter((project) => project.workType === "project").map((project) => {
+          return (
+            <div style={{ marginBottom: "25px" }}>
               <ResearchPageEntry
                 image={project.image}
                 project={project.company}

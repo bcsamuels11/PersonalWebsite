@@ -3,8 +3,8 @@ import { Redirect } from "react-router";
 import { Link } from "react-router-dom";
 import { Container, Card, Button, CardDeck, Col, Row } from "react-bootstrap";
 import "./Home.css";
-import { WORK_EXPERIENCES } from "../shared/workExperience";
-import WorkModal from "../components/WorkModal";
+import { WORK_EXPERIENCES } from "../shared/workExperience.js";
+import WorkModal from "../components/WorkModal.js";
 import * as constants from "../Constants.js";
 import * as routes from "../routes.js";
 
@@ -42,7 +42,7 @@ export default class Home extends Component {
   openWorkModal(workID) {
     // this.setWorkInfo(workExperience);
     this.setState({
-      selectedExperience: WORK_EXPERIENCES.filter((experience) => workID === experience.id)[0] 
+      selectedExperience: WORK_EXPERIENCES.filter((experience) => workID === experience.id)[0]
     });
   }
 
@@ -95,7 +95,7 @@ export default class Home extends Component {
                 : { margin: "auto", marginBottom: "5vh" }
             }
           >
-            <img alt="Alt" src={"/assets/propic.jpg"} style={{width: "70vw", height: "70vw", margin: "auto"}} className="profileImage"/>
+            <img alt="Alt" src={"/assets/propic.jpg"} style={{ width: "70vw", height: "70vw", margin: "auto" }} className="profileImage" />
           </Row>
           <Row>
             <Col style={{ marginTop: "2vw" }}>
@@ -137,7 +137,7 @@ export default class Home extends Component {
             <Col
               style={
                 document.documentElement.clientWidth <
-                constants.DESKTOP_VIEWPORT
+                  constants.DESKTOP_VIEWPORT
                   ? { display: "none" }
                   : {}
               }
@@ -172,16 +172,16 @@ export default class Home extends Component {
             }}
           >
             <h1 className="flexbox">Work Experience</h1>
-            <CardDeck style={{width: "80vw", margin: "auto"}}>
+            <CardDeck style={{ width: "80vw", margin: "auto" }}>
               <Card
-                  className="workCard"
-                  onClick={() => this.openWorkModal(this.workExperience.BLOOMBERG)}
-                >
-                  <Card.Img variant="top" src={bloombergLogo} />
-                  <Card.Body>
-                    <Card.Title>Bloomberg SWE</Card.Title>
-                  </Card.Body>
-                </Card>
+                className="workCard"
+                onClick={() => this.openWorkModal(this.workExperience.BLOOMBERG)}
+              >
+                <Card.Img variant="top" src={bloombergLogo} />
+                <Card.Body>
+                  <Card.Title>Bloomberg SWE</Card.Title>
+                </Card.Body>
+              </Card>
 
               <Card
                 className="workCard"
@@ -245,11 +245,11 @@ export default class Home extends Component {
             </div>
 
             {/* Expand Deck */}
-            <CardDeck 
+            <CardDeck
               style={
                 this.state.isWorkExpanded
-                  ? { marginTop: "5vh", width: "80vw", margin: "auto"}
-                  : { display: "none", width: "80vw", margin: "auto"}
+                  ? { marginTop: "5vh", width: "80vw", margin: "auto" }
+                  : { display: "none", width: "80vw", margin: "auto" }
               }
             >
               <Card
